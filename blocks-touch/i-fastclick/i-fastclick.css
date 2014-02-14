@@ -1,0 +1,9 @@
+/*
+    https://st.yandex-team.ru/BEM-1589
+    В связи с принудительной генерацией mouse-событий на кликабельных элементах,
+    закрашиваем цвет дефолтной подсветки.
+ */
+.i-ua_platform_ios a[onmousedown]
+{
+    -webkit-tap-highlight-color: transparent;
+}

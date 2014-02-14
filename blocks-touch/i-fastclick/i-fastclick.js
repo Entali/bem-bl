@@ -229,6 +229,12 @@ FastClick.prototype.needsClick = function(target) {
     case 'label':
     case 'video':
         return true;
+    default:
+        // Временный костыль https://st.yandex-team.ru/BEM-1589
+        if($(target).closest('a[onmousedown]')[0]) {
+            return true;
+        }
+
     }
 
     return (/\bneedsclick\b/).test(target.className);
